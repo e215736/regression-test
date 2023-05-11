@@ -5,5 +5,8 @@ print(f'{X=}')
 print(f'{Y=}')
 
 import regression
+import importlib
+importlib.reload(regression)
 model = regression.LinearRegression()
-model.x
+model.fit(X,Y)
+print(model.theta)
